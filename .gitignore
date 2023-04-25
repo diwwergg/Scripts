@@ -1,0 +1,5 @@
+# Ignore all about vscode 
+.vscode
+*.ini
+*.log
+*.pyc
