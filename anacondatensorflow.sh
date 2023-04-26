@@ -8,7 +8,6 @@ sudo apt update && sudo apt upgrade -y
 echo "Installing Anaconda..."
 wget https://repo.anaconda.com/archive/Anaconda3-2023.03-Linux-x86_64.sh 
 sudo bash Anaconda3-2023.03-Linux-x86_64.sh -b -p $HOME/anaconda3
-rm Anaconda3-2023.03-Linux-x86_64.sh
 
 # Add Anaconda to PATH
 echo "Adding Anaconda to PATH..."
@@ -29,7 +28,7 @@ sudo apt-get -y install cuda libcudnn8 libcudnn8-dev
 echo "Creating conda environment and installing TensorFlow..."
 conda create -n tf python=3.9 -y
 conda activate tf
-pip install tensorflow tensorflow-gpu
+pip install tensorflow
 python3 -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
 
 # Show success message
